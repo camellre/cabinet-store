@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.scss";
+import Badge from "./components/Badge";
 import LinkArrow from "./components/LinkArrow";
 
 function App() {
   return (
-    <div>
+    <>
       <h1>Hello World!</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -15,7 +16,8 @@ function App() {
         eius!
       </p>
       <LinkArrow linkPath="#" />
-    </div>
+      <Badge theme="badge--secondary--small" text="10% Off" />
+    </>
   );
 }
 

@@ -1,0 +1,52 @@
+@use "../App.scss" as app;
+
+.badge {
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #fff;
+}
+
+@mixin theme($theme: app.$primary-color) {
+  @extend .badge;
+  background: $theme;
+}
+
+.badge--big {
+  font-size: 2rem;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+.badge--primary {
+  @include theme;
+  @extend .badge--big;
+}
+
+.badge--secondary {
+  @include theme($theme: app.$secondary-color);
+  @extend .badge--big;
+}
+
+.badge--primary--small {
+  @include theme;
+  @extend .badge--small;
+}
+
+.badge--secondary--small {
+  @include theme($theme: app.$secondary-color);
+  @extend .badge--small;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge--big {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
