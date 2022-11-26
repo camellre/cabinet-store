@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Badge from "./components/Badge";
+import Icon from "./components/Icon";
 import LinkArrow from "./components/LinkArrow";
 import List from "./components/List";
 
@@ -40,6 +41,7 @@ function App() {
         selectedItem={selectedListItem}
         listStyle="list"
       />
+      <Icon />
     </>
   );
 }
