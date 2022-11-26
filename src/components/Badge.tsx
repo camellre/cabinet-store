@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../css/Badge.module.scss";
 
-interface Theme {
+interface BadgeProps {
   theme: string;
   text: string;
 }
 
-function Badge({ theme, text }: Theme) {
+function Badge({ theme, text }: BadgeProps) {
   return <span className={styles[theme]}>{text}</span>;
 }
 

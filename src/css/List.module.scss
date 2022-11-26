@@ -1,0 +1,24 @@
+@use "../App.scss" as app;
+
+$activeBackgroundColor: gray;
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: app.$headings-color;
+  cursor: pointer;
+}
+
+.list--horizontal {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.activeList {
+  background: $activeBackgroundColor;
+}
+
+.activeList--horizontal {
+  @extend .list--horizontal;
+  background: $activeBackgroundColor;
+}

@@ -2,21 +2,44 @@ import React from "react";
 import "./App.scss";
 import Badge from "./components/Badge";
 import LinkArrow from "./components/LinkArrow";
+import List from "./components/List";
+
+interface ListItem {
+  id: string;
+  text: string;
+}
 
 function App() {
+  const listItem: ListItem[] = [
+    {
+      id: "1",
+      text: "Item 1",
+    },
+    {
+      id: "2",
+      text: "Item 2",
+    },
+    {
+      id: "3",
+      text: "Item 3",
+    },
+  ];
+
+  let selectedListItem: string | null = "Item 3";
+  const handleItemSelect = () => {
+    console.log("itemselected");
+  };
+
   return (
     <>
-      <h1>Hello World!</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-        atque magni numquam, natus perspiciatis alias aut, hic, odio porro eaque
-        similique est aliquam doloribus blanditiis modi quaerat dolore dolores
-        eius!
-      </p>
-      <LinkArrow linkPath="#" />
-      <Badge theme="badge--secondary--small" text="10% Off" />
+      <List
+        items={listItem}
+        keyExtractor={({ id }: ListItem) => id}
+        itemExtractor={({ text }: ListItem) => text}
+        onItemSelected={handleItemSelect}
+        selectedItem={selectedListItem}
+        listStyle="list"
+      />
     </>
   );
 }
