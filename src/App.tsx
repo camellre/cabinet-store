@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.scss";
-import Badge from "./components/Badge";
+import Button from "./components/Button";
 import Icon from "./components/Icon";
-import LinkArrow from "./components/LinkArrow";
 import List from "./components/List";
 
 interface ListItem {
@@ -42,6 +41,7 @@ function App() {
         listStyle="list"
       />
       <Icon />
+      <Button theme="btn--secondary" blockButton={false} />
     </>
   );
 }

@@ -1,0 +1,67 @@
+@use "../App.scss" as app;
+
+.btn {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem 3rem;
+  color: rgb(0, 0, 0);
+  border: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  @extend .btn;
+  background: app.$primary-color;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: lighten($color: app.$primary-color, $amount: 10%);
+}
+
+.btn--secondary {
+  @extend .btn;
+  background: app.$secondary-color;
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: lighten($color: app.$secondary-color, $amount: 15%);
+}
+
+.btn--accent {
+  @extend .btn;
+  background: app.$accent-color;
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: lighten($color: app.$accent-color, $amount: 10%);
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn--outline {
+  background: #fff;
+  color: app.$headings-color;
+  border: 2px solid app.$headings-color;
+}
+
+.btn--outline:hover {
+  background: app.$headings-color;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
