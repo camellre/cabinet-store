@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import Button from "./components/Button";
 import Icon from "./components/Icon";
+import Input from "./components/Input";
 import List from "./components/List";
 
 interface ListItem {
@@ -42,6 +43,7 @@ function App() {
       />
       <Icon />
       <Button theme="btn--secondary" blockButton={false} />
+      <Input />
     </>
   );
 }
