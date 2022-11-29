@@ -50,6 +50,7 @@
 }
 
 .btn--outline {
+  @extend .btn;
   background: #fff;
   color: app.$headings-color;
   border: 2px solid app.$headings-color;
