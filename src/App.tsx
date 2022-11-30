@@ -1,12 +1,7 @@
 import React from "react";
 import "./App.scss";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import Grid from "./components/Grid";
-import Icon from "./components/Icon";
-import Input from "./components/Input";
+import Collapsible from "./components/Collapsible";
 import List from "./components/List";
-import MediaObject from "./components/MediaObject";
 
 interface ListItem {
   id: string;
@@ -44,7 +39,7 @@ function App() {
         selectedItem={selectedListItem}
         listStyle="list"
       />
-      <Grid />
+      <Collapsible />
     </>
   );
 }
