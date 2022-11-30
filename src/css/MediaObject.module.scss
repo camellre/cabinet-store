@@ -1,0 +1,17 @@
+@use "../App.scss" as app;
+
+.media {
+  display: flex;
+}
+
+.mediaTitle {
+  margin-top: 0;
+}
+
+.mediaBody {
+  margin: 0 2rem;
+}
+
+.mediaImage {
+  margin-top: 1rem;
+}
