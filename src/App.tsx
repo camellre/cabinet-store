@@ -12,7 +12,7 @@ function App() {
   const listItem: ListItem[] = [
     {
       id: "1",
-      text: "Item 1",
+      text: "Item 12",
     },
     {
       id: "2",
