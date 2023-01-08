@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.scss";
-import Collapsible from "./components/Collapsible";
-import List from "./components/List";
+import FeatureBar from "./components/FeatureBar";
+import HomePageFooter from "./components/HomePageFooter";
+import HomePageGrid from "./components/HomePageGrid";
+import NavBar from "./components/NavBar";
+import PromotionBar from "./components/PromotionBar";
 
 interface ListItem {
   id: string;
@@ -31,15 +34,11 @@ function App() {
 
   return (
     <>
-      <List
-        items={listItem}
-        keyExtractor={({ id }: ListItem) => id}
-        itemExtractor={({ text }: ListItem) => text}
-        onItemSelected={handleItemSelect}
-        selectedItem={selectedListItem}
-        listStyle="list"
-      />
-      <Collapsible />
+      <NavBar />
+      <PromotionBar />
+      <FeatureBar />
+      <HomePageGrid />
+      <HomePageFooter />
     </>
   );
 }
