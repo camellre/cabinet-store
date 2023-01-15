@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import Button from "./commoncomponents/Button";
 import FeatureBar from "./components/FeatureBar";
 import HomePageFooter from "./components/HomePageFooter";
 import HomePageGrid from "./components/HomePageGrid";
@@ -14,6 +15,7 @@ function App() {
       <FeatureBar />
       <HomePageGrid />
       <HomePageFooter />
+      <Button />
     </>
   );
 }
