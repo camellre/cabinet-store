@@ -22,3 +22,7 @@ $activeBackgroundColor: gray;
   @extend .list--horizontal;
   background: $activeBackgroundColor;
 }
+
+.navList {
+  width: 100%;
+}
