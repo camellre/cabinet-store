@@ -15,7 +15,7 @@ function App() {
       <FeatureBar />
       <HomePageGrid />
       <HomePageFooter />
-      <Button theme={"shortButton"} text={"Sign Up"} />
+      <Button theme={"longButton"} text={"Sign Up"} />
     </>
   );
 }

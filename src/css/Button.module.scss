@@ -8,6 +8,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  white-space: nowrap;
+  transition: all 0.3s;
 }
 
 .navBarButton {
