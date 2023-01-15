@@ -9,7 +9,10 @@ interface ButtonProp {
 export default function Button({ theme, text }: ButtonProp) {
   return (
     <div>
-      <button className={style[theme]}>{text}</button>
+      <button className={style[theme]}>
+        <span>{text}</span>
+        <span>{"->"}</span>
+      </button>
     </div>
   );
 }

@@ -3,6 +3,8 @@
 .btn {
   border-radius: 5px;
   height: 5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
 }
 
 .navBarButton {
@@ -12,10 +14,23 @@
   align-items: center;
   justify-content: center;
   border: 0;
-  font-size: 1.7rem;
   width: 21rem;
 }
 
 .navBarButton:hover {
   background: rgb(169, 0, 0);
+}
+
+.cardButton {
+  @extend .btn;
+  background: rgb(11, 82, 85);
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  width: 35rem;
+}
+
+.cardButton:hover {
+  background: rgb(9, 59, 61);
 }
