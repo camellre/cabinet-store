@@ -2,7 +2,7 @@ import React from "react";
 import style from "../css/Button.module.scss";
 
 interface ButtonProp {
-  theme: "NavBarButton" | "CardButton" | "LongButton" | "ShorButton";
+  theme: "navBarButton" | "cardButton" | "longButton" | "shorButton";
   text: string;
 }
 

@@ -1,1 +1,21 @@
 @use "../App.scss" as app;
+
+.btn {
+  border-radius: 5px;
+  height: 5rem;
+}
+
+.navBarButton {
+  @extend .btn;
+  background: rgb(200, 0, 0);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-size: 1.7rem;
+  width: 21rem;
+}
+
+.navBarButton:hover {
+  background: rgb(169, 0, 0);
+}

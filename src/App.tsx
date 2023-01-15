@@ -15,7 +15,7 @@ function App() {
       <FeatureBar />
       <HomePageGrid />
       <HomePageFooter />
-      <Button theme={"NavBarButton"} text={"Sign Up"} />
+      <Button theme={"navBarButton"} text={"Free Design & Quote"} />
     </>
   );
 }
