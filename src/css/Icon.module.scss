@@ -1,1 +1,13 @@
 @use "../App.scss" as app;
+
+.icon {
+  height: 27px;
+  width: 27px;
+}
+
+.iconContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
