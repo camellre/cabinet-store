@@ -7,9 +7,5 @@ interface ButtonProp {
 }
 
 export default function Button({ theme, text }: ButtonProp) {
-  return (
-    <div>
-      <button className={style[theme]}>{text}</button>
-    </div>
-  );
+  return <button className={style[theme]}>{text}</button>;
 }
