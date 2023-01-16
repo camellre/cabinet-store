@@ -10,9 +10,11 @@ function App() {
   return (
     <>
       <NavBar />
-      <PromotionBar />
-      <FeatureBar />
-      <HomePageGrid />
+      <div className="bodyContainer">
+        <PromotionBar />
+        <FeatureBar />
+        <HomePageGrid />
+      </div>
       <HomePageFooter />
     </>
   );
