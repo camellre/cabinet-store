@@ -2,13 +2,14 @@
 
 .navBarContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .navBarMenuContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navBarMenu {
@@ -17,4 +18,26 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.navBarMenuItem {
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navBarToggler {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navBarToggler {
+    display: inline;
+  }
+
+  .navBarMenu {
+    display: none;
+  }
 }
