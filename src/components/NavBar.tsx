@@ -8,13 +8,13 @@ import { ReactComponent as NavBarImageSettings } from "../images/settings.svg";
 
 export default function NavBar() {
   return (
-    <div className={style.navBarContainer}>
-      <span className={style.navBarToggler}>
-        <Icon IconImage={NavBarImageSettings} />
-      </span>
-      <Icon IconImage={NavBarImageHome} />
-      <div className={style.navBarMenuContainer}>
-        <div className={style.navBarMenu}>
+    <div className={style.navBarBackground}>
+      <div className={style.navBarContainer}>
+        <span className={style.navBarToggler}>
+          <Icon IconImage={NavBarImageSettings} />
+        </span>
+        <Icon IconImage={NavBarImageHome} />
+        <div className={style.navBarMenuContainer}>
           <a className={style.navBarMenuItem} href="#home">
             Home
           </a>
@@ -28,8 +28,10 @@ export default function NavBar() {
             Contact Us
           </a>
         </div>
-        <Icon IconImage={NavBarImageSearch} />
-        <Icon IconImage={NavBarImageUser} />
+        <div className={style.navBarMenuTools}>
+          <Icon IconImage={NavBarImageSearch} />
+          <Icon IconImage={NavBarImageUser} />
+        </div>
       </div>
     </div>
   );

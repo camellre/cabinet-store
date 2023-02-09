@@ -1,29 +1,35 @@
 @use "../App.scss" as app;
 
+.navBarBackground {
+  background-color: gold;
+}
+
 .navBarContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 .navBarMenuContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navBarMenu {
-  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.navBarMenuTools {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .navBarMenuItem {
   height: 55px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 0 1rem;
 }
@@ -34,10 +40,10 @@
 
 @media screen and (max-width: 768px) {
   .navBarToggler {
-    display: inline;
+    display: flex;
   }
 
-  .navBarMenu {
+  .navBarMenuContainer {
     display: none;
   }
 }
