@@ -7,20 +7,15 @@ import { ReactComponent as NavBarImageUser } from "../images/user.svg";
 import { ReactComponent as NavBarImageSettings } from "../images/settings.svg";
 
 export default function NavBar() {
-  let navBarStyle = style.navBarBackground;
-  const [toggler, setToggler] = useState(false);
+  const [navBarStyle, setNavBarStyle] = useState(style.navBarBackground);
 
   const handleTogglerClick = () => {
-    console.log(toggler);
     console.log(navBarStyle);
-    if (!toggler) return setToggler(true);
-    setToggler(false);
+    if (navBarStyle === style.navBarBackground)
+      return setNavBarStyle(style.navBarBackground + " " + style.navBarMobile);
+    setNavBarStyle(style.navBarBackground);
   };
 
-  useEffect(() => {
-    if (toggler)
-      navBarStyle = style.navBarBackground + " " + style.navBarMobile;
-  });
   return (
     <div className={navBarStyle}>
       <div className={style.navBarContainer}>

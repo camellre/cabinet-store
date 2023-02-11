@@ -13,7 +13,7 @@
 }
 
 .navBarMenuContainer {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -35,7 +35,7 @@
 }
 
 .navBarToggler {
-  display: none;
+  display: flex;
 }
 
 .navBarMobileMenu {
@@ -54,12 +54,17 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .navBarToggler {
-    display: flex;
+    display: none;
   }
 
   .navBarMenuContainer {
-    display: none;
+    display: flex;
+  }
+
+  .navBarMobile .navBarMobileMenu {
+    max-height: 0;
+    opacity: 0;
   }
 }
