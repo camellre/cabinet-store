@@ -10,6 +10,7 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1024px;
+  min-height: 65px;
 }
 
 .navBarMenuContainer {
@@ -28,7 +29,6 @@
 }
 
 .navBarMenuItem {
-  height: 55px;
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -52,6 +52,12 @@
 .navBarMobile .navBarMobileMenu {
   max-height: 100vh;
   opacity: 1;
+}
+
+.navBarDropdownMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {

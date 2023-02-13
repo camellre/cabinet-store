@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "../css/NavBar.module.scss";
 import Icon from "../commoncomponents/Icon";
 import { ReactComponent as NavBarImageHome } from "../images/home.svg";
@@ -6,7 +6,49 @@ import { ReactComponent as NavBarImageSearch } from "../images/search.svg";
 import { ReactComponent as NavBarImageUser } from "../images/user.svg";
 import { ReactComponent as NavBarImageSettings } from "../images/settings.svg";
 
+interface DropdownMenu {
+  [key: string]: JSX.Element;
+}
+
 export default function NavBar() {
+  const iconContainer = <Icon IconImage={NavBarImageSettings} />;
+  const [dropdownMenuContent, setDropdownMenuContent] = useState(<></>);
+
+  const dropdownMenu: DropdownMenu = {
+    home: (
+      <div className={style.navBarDropdownMenu}>
+        <a href="#1">Home1</a>
+        <a href="#2">Home2</a>
+        <a href="#3">Home3</a>
+        <a href="#4">Home4</a>
+      </div>
+    ),
+    shop: (
+      <div className={style.navBarDropdownMenu}>
+        <a href="#1">Shop1</a>
+        <a href="#2">Shop2</a>
+        <a href="#3">Shop3</a>
+        <a href="#4">Shop4</a>
+      </div>
+    ),
+    about: (
+      <div className={style.navBarDropdownMenu}>
+        <a href="#1">About1</a>
+        <a href="#2">About2</a>
+        <a href="#3">About3</a>
+        <a href="#4">About4</a>
+      </div>
+    ),
+    contact: (
+      <div className={style.navBarDropdownMenu}>
+        <a href="#1">Contact1</a>
+        <a href="#2">Contact2</a>
+        <a href="#3">Contact3</a>
+        <a href="#4">Contact4</a>
+      </div>
+    ),
+  };
+
   const [navBarStyle, setNavBarStyle] = useState(style.navBarBackground);
 
   const handleTogglerClick = () => {
@@ -16,24 +58,64 @@ export default function NavBar() {
     setNavBarStyle(style.navBarBackground);
   };
 
+  const handleDropdown = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    const menuName = e.currentTarget.id;
+    console.log(menuName);
+    setDropdownMenuContent(dropdownMenu[menuName]);
+    console.log(dropdownMenu[menuName]);
+  };
+
+  const handleDropdownLeave = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    setDropdownMenuContent(<></>);
+  };
+
   return (
-    <div className={navBarStyle}>
+    <div
+      className={navBarStyle}
+      onMouseLeave={(e) => {
+        handleDropdownLeave(e);
+      }}
+    >
       <div className={style.navBarContainer}>
         <span onClick={handleTogglerClick} className={style.navBarToggler}>
-          <Icon IconImage={NavBarImageSettings} />
+          {iconContainer}
         </span>
         <Icon IconImage={NavBarImageHome} />
         <div className={style.navBarMenuContainer}>
-          <a className={style.navBarMenuItem} href="#home">
+          <a
+            id="home"
+            onMouseEnter={(e) => handleDropdown(e)}
+            className={style.navBarMenuItem}
+            href="#home"
+          >
             Home
           </a>
-          <a className={style.navBarMenuItem} href="#shop">
+          <a
+            id="shop"
+            onMouseEnter={(e) => handleDropdown(e)}
+            className={style.navBarMenuItem}
+            href="#shop"
+          >
             Shop
           </a>
-          <a className={style.navBarMenuItem} href="#about">
+          <a
+            id="about"
+            onMouseEnter={(e) => handleDropdown(e)}
+            className={style.navBarMenuItem}
+            href="#about"
+          >
             About Us
           </a>
-          <a className={style.navBarMenuItem} href="#contact">
+          <a
+            id="contact"
+            onMouseEnter={(e) => handleDropdown(e)}
+            className={style.navBarMenuItem}
+            href="#contact"
+          >
             Contact Us
           </a>
         </div>
@@ -56,6 +138,7 @@ export default function NavBar() {
           Contact Us
         </a>
       </div>
+      {dropdownMenuContent}
     </div>
   );
 }
