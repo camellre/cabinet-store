@@ -45,15 +45,63 @@ export default function NavBar() {
               </a>
             </div>
           </div>
-          <a id="shop" className={style.navBarMenuItem} href="#shop">
-            Shop
-          </a>
-          <a id="about" className={style.navBarMenuItem} href="#about">
-            About Us
-          </a>
-          <a id="contact" className={style.navBarMenuItem} href="#contact">
-            Contact Us
-          </a>
+          <div className={style.navBarMenuItemContainer}>
+            <a className={style.navBarMenuItem} href="#shop">
+              Shop
+            </a>
+            <div className={style.navBarDropdownMenuContainer}>
+              <a className={style.navBarDropdownMenuItem} href="#link1">
+                Shop 1
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link2">
+                Shop 2
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link3">
+                Shop 3
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link4">
+                Shop 4
+              </a>
+            </div>
+          </div>
+          <div className={style.navBarMenuItemContainer}>
+            <a className={style.navBarMenuItem} href="#aboutus">
+              About Us
+            </a>
+            <div className={style.navBarDropdownMenuContainer}>
+              <a className={style.navBarDropdownMenuItem} href="#link1">
+                About Us 1
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link2">
+                About Us 2
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link3">
+                About Us 3
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link4">
+                About Us 4
+              </a>
+            </div>
+          </div>
+          <div className={style.navBarMenuItemContainer}>
+            <a className={style.navBarMenuItem} href="#contactus">
+              Contact Us
+            </a>
+            <div className={style.navBarDropdownMenuContainer}>
+              <a className={style.navBarDropdownMenuItem} href="#link1">
+                Contact Us 1
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link2">
+                Contact Us 2
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link3">
+                Contact Us 3
+              </a>
+              <a className={style.navBarDropdownMenuItem} href="#link4">
+                Contact Us 4
+              </a>
+            </div>
+          </div>
         </div>
         <div className={style.navBarMenuToolContainer}>
           <Icon IconImage={NavBarImageSearch} />

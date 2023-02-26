@@ -47,12 +47,20 @@
   opacity: 1;
 }
 
+.navBarMenuItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  cursor: pointer;
+  height: 55px;
+  width: 100px;
+  margin: 0 20px;
+}
+
 .navBarMenuItem {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
-  cursor: pointer;
-  height: 55px;
 }
 
 .navBarDropdownMenuContainer {
@@ -62,7 +70,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 56px;
+  top: 55px;
   display: flex;
   opacity: 0;
   visibility: hidden;
@@ -73,6 +81,12 @@
 
 .navBarDropdownMenuItem {
   display: flex;
+  margin: 0 40px;
+  height: 80px;
+  width: 160px;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
 }
 
 .navBarMenuItemContainer:hover .navBarDropdownMenuContainer {
